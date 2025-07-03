@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🔒 Secure File Sharing</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 400px;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4facfe;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #00c6fb;
+}
+
+hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h2>🔒 Upload a File</h2>
+  <form method="post" enctype="multipart/form-data">
+    <label>Select a file to upload:</label>
+    <input type="file" name="file" required>
+    <button type="submit">Upload & Encrypt</button>
+  </form>
+
+  <hr>
+
+  <h2>🔓 Download a File</h2>
+  <form method="post" action="/download">
+    <label>Enter original filename:</label>
+    <input type="text" name="filename" placeholder="e.g., document.pdf" required>
+    <button type="submit">Download & Decrypt</button>
+  </form>
+
+  <footer>© 2025 Secure File Sharing</footer>
+</div>
+</body>
+</html>
